@@ -1,0 +1,15 @@
+{
+  "name": "scenex",
+  "version": "1.0.0",
+  "description": "Scene-release tags from string",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scene",
+    "release"
+  ],
+  "author": "Marius Berget",
+  "license": "MIT"
+}
