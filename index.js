@@ -15,7 +15,7 @@ export default function(str) {
     lang:       /(MULTISUBS|MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)([\.\s]NORDICSUBS|[\.\s]ENG)?/i,
     edition:    /UNRATED|DC|REMASTERED|(Directors|EXTENDED)[\.\s](CUT|EDITION)|EXTENDED|3D|2D|\bNF\b|\bAMZN\b|\bDSNP\b/i,
     type:       /CAM|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|DDC|R5[\.\s]LINE|R5|(DVD|HD|BR|BD|WEB)Rip|DVD|DVDR|(HD|PD)TV|WEB-DL|WEBDL|BluRay|WEB/i,
-    audio:      /AAC2[\.\s]0|AAC|(DTS-HD([\.\s]MA[\.\s]5[\.\s]1)?|DTS[0-9][\.\s][0-1]|DTS)|(AC3[\.\s](DD2[\.\s]0|DD5[\.\s]1)|AC3|DD[\+]5[\.\s]1|DD5[\.\s]1)|(DDP5[\.\s]1|DDP2[\.\s]0|DDP2[\.\s]1)|(TRUEHD[\.\s]5[\.\s]1)|(DD[\.\s\+]ATMOS)/i,
+    audio:      /AAC2[\.\s]0|AAC|(DTS-HD([\.\s]MA[\.\s](5[\.\s]1|7[\.\s]1))?|DTS[0-9][\.\s][0-1]|DTS)|(AC3[\.\s](DD2[\.\s]0|DD5[\.\s]1)|AC3|DD[\+]5[\.\s]1|DD5[\.\s]1)|(DDP5[\.\s]1|DDP2[\.\s]0|DDP2[\.\s]1)|(TRUEHD[\.\s]5[\.\s]1)|(DD[\.\s\+]ATMOS)/i,
     other:      /UHD|DOCU/i,
     group:      /\w+$/i
   };
