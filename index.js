@@ -5,8 +5,8 @@ export default function(str) {
 
   // All regexes
   var scenex = {
-    year:       /(?!^)[1,2]\d{3}/i,
-    resolution: /\d{3,4}p/i,
+    year:       /\b(?!^)[1,2]\d{3}\b/i,
+    resolution: /(\d{3,4}p)/i,
     size:       /\d{2,5}[MG]B/i,
     color:      /(10-bit|\bHDR\b)/i,
     tags:       /(COMPLETE|LIMITED|INTERNAL|DUBBED)/i,
@@ -15,7 +15,7 @@ export default function(str) {
     lang:       /(MULTISUBS|MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)([\.\s]NORDICSUBS|[\.\s]ENG)?/i,
     edition:    /UNRATED|DC|REMASTERED|(Directors|EXTENDED)[\.\s](CUT|EDITION)|EXTENDED|3D|2D|\bNF\b|\bAMZN\b|\bDSNP\b/i,
     type:       /CAM|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|DDC|R5[\.\s]LINE|R5|(DVD|HD|BR|BD|WEB)Rip|DVD|DVDR|(HD|PD)TV|WEB-DL|WEBDL|BluRay|WEB/i,
-    audio:      /(AAC[0-9][\.\s][0-9]|AAC)|(DTS([\.\s\-](HD[\.\s\-]MA|HD|MA)[\.\s]([0-9][\.\s][0-9]|))?|DTS([0-9][\.\s][0-9])?)|(AC3([\.\s](DD([0-9][\.\s][0-9])?)?)?)|(DD([\+][0-9][\.\s][0-9]|[\.\s\+]ATMOS))|(DD(P)?[0-9][\.\s][0-9])|(TRUEHD[\.\s][0-9][\.\s][0-9])/i,
+    audio:      /(AAC[0-9][\.\s][0-9]|AAC)|(DTS([\.\s\-](HD[\.\s\-]MA|HD|MA)([\.\s][0-9][\.\s][0-9]|))?|DTS([0-9][\.\s][0-9])?)|(AC3([\.\s](DD([0-9][\.\s][0-9])?)?)?)|(DD([\+][0-9][\.\s][0-9]|[\.\s\+]ATMOS))|(DD(P)?[0-9][\.\s][0-9])|(TRUEHD[\.\s][0-9][\.\s][0-9])/i,
     other:      /UHD|DOCU/i,
     group:      /\w+$/i
   };
