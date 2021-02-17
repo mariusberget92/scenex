@@ -15,7 +15,7 @@ console.log(tags);
   	resolution: "1080p",
   	title: "Citizenfour",
   	type: "BluRay",
-  	video: "x264",
+  	encoding: "x264",
   	year: "2014"
 }
 */
