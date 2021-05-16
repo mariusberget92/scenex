@@ -13,7 +13,7 @@ export default function(str) {
     video:      /((REMUX[\.\s](AVC|HEVC)?|(AVC|HEVC)[\.\s]REMUX)|NTSC|PAL|HEVC)/i,
     encoding:   /\b[xh]?[\.\s]?\d{3}\b/i,
     release:    /REAL[\.\s]PROPER|PROPER|REPACK|READNFO|READ[\.\s]NFO|DiRFiX|NFOFiX/i,
-    lang:       /(MULTISUBS|MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)|([\.\s]NORDICSUBS|[\.\s]ENG)?/i,
+    lang:       /((MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)(SUBS)?)/i,
     edition:    /UNRATED|DC|REMASTERED|(Directors|EXTENDED|COLLECTORS)[\.\s](CUT|EDITION)|EXTENDED|3D|2D|\bNF\b|\bAMZN\b|\bDSNP\b|\bHMAX\b/i,
     type:       /CAM|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|DDC|R5[\.\s]LINE|R5|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|(WEB(-)?(DL)?)|BluRay/i,
     audio:      /(AAC[0-9][\.\s][0-9]|AAC)|(DTS([\.\s\-](HD[\.\s\-]MA|HD|MA)([\.\s][0-9][\.\s][0-9]|))?|DTS([0-9][\.\s][0-9])?)|(AC3([\.\s](DD([0-9][\.\s][0-9])?)?)?)|(DD([\+][0-9][\.\s][0-9]|[\.\s\+]ATMOS))|(DD(P)?[0-9][\.\s][0-9])|(TRUEHD[\.\s][0-9][\.\s][0-9])|(ATMOS)/i,
