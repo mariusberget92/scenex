@@ -16,7 +16,7 @@ export default function(str) {
     lang:       /((MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)(SUBS)?)/i,
     edition:    /UNRATED|DC|REMASTERED|(Directors|EXTENDED|COLLECTORS)[\.\s](CUT|EDITION)|EXTENDED|3D|2D|\bNF\b|\bAMZN\b|\bDSNP\b|\bHMAX\b/i,
     type:       /CAM|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|DDC|R5[\.\s]LINE|R5|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|(WEB(-)?(DL)?)|BluRay/i,
-    audio:      /(AAC[0-9][\.\s][0-9]|AAC)|(DTS([\.\s\-](HD[\.\s\-]MA|HD|MA)([\.\s][0-9][\.\s][0-9]|))?|DTS([0-9][\.\s][0-9])?)|(AC3([\.\s](DD([0-9][\.\s][0-9])?)?)?)|(DD([\+][0-9][\.\s][0-9]|[\.\s\+]ATMOS))|(DD(P)?[0-9][\.\s][0-9])|(TRUEHD[\.\s][0-9][\.\s][0-9])|(ATMOS)/i,
+    audio:      /(AAC([0-9][\.\s][0-9])?|AAC)|(DTS([\.\s\-](HD([\.\s\-]MA)?))?([\.\s\-]\d[\.\s\-]\d)?)|(AC3([\.\s](DD([0-9][\.\s][0-9])?)?)?)|(DD(P)?(([\+\-\.\s])?([\+\-\.\s]ATMOS)?(\d)?[\-\.\s]\d)?([\-\.\s]ATMOS)?)|((ATMOS[\.\-\s])?TRUE([\-\.\s])?HD[\.\-\s](ATMOS[\.\-\s])?(\d[\.\-\s]\d)?|(ATMOS)([\.\s\-]\d[\.\s\-]\d)?)/i,
     other:      /UHD|DOCU/i,
     group:      /\w+$/i
   };
