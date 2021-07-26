@@ -5,7 +5,7 @@ export default function(str) {
 
   // All regexes
   var scenex = {
-    year:       /\b(?!^)[1,2]\d{3}\b/i,
+    year:       /\b\d{4}\b(?!\d|.*\b\d{4}\b)/i,
     resolution: /(\d{3,4}p)/i,
     size:       /\d{2,5}[MG]B/i,
     color:      /(10-bit|\bHDR\b)/i,
