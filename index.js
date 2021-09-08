@@ -11,7 +11,7 @@ export default function(str) {
     color:      /(10-bit|\bHDR\b)/i,
     tags:       /(COMPLETE|LIMITED|INTERNAL|DUBBED)/i,
     video:      /((REMUX[\.\s](AVC|HEVC)?|(AVC|HEVC)[\.\s]REMUX)|NTSC|PAL|HEVC)/i,
-    encoding:   /\b[xh]?[\.\s]?\d{3}\b/i,
+    encoding:   /\b[xh][\.\s]?\d{3}\b/i,
     release:    /REAL[\.\s]PROPER|PROPER|REPACK|READNFO|READ[\.\s]NFO|DiRFiX|NFOFiX/i,
     lang:       /((MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)(SUBS)?)/i,
     edition:    /UNRATED|DC|REMASTERED|(Directors|EXTENDED|COLLECTORS)[\.\s](CUT|EDITION)|EXTENDED|3D|2D|\bNF\b|\bAMZN\b|\bDSNP\b|\bHMAX\b/i,
