@@ -10,16 +10,36 @@ console.log(tags);
 
 /*
 {
-	audio: "DTS",
-  	group: "HDMaNiAcS",
-  	resolution: "1080p",
-  	title: "Citizenfour",
-  	type: "BluRay",
-  	encoding: "x264",
-  	year: "2014"
+  title: 'Citizenfour',
+  year: '2014',
+  resolution: '1080p',
+  videoEncoding: 'x264',
+  videoSource: 'BluRay',
+  audio: 'DTS',
+  releaseGroup: 'HDMaNiAcS'
 }
 */
 ````
 
+All tags that can be extracted with examples:
+
+````
+	title            The Movie Title
+	year             2003
+    resolution       1080p
+    HDR              HDR
+    UHD              UHD
+    audio            DTS
+    videoBitDepth    10bit
+    videoEncoding    x264
+    videoStandard    PAL
+    videoEdition     Remastered
+    videoSource      BluRay
+    video3D          3D
+    streamingSource  AMZN
+    releaseGroup     NoGRoUP
+    misc             INTERNAL
+    trash            REDUX
+````
 
 

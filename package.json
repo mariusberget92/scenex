@@ -1,5 +1,6 @@
 {
   "name": "scenex",
+  "type": "module",
   "version": "1.0.0",
   "description": "Scene-release tags from string",
   "main": "index.js",
@@ -8,7 +9,13 @@
   },
   "keywords": [
     "scene",
-    "release"
+    "release",
+    "movie",
+    "organizer",
+    "gui",
+    "electronjs",
+    "javascript", 
+    "node"
   ],
   "author": "Marius Berget",
   "license": "MIT"
