@@ -24,7 +24,7 @@ console.log(tags);
 All tags that can be extracted with examples:
 
 ````
-	title            The Movie Title
+title            The Movie Title
 	year             2003
     resolution       1080p
     HDR              HDR
