@@ -10,12 +10,7 @@
   "keywords": [
     "scene",
     "release",
-    "movie",
-    "organizer",
-    "gui",
-    "electronjs",
-    "javascript", 
-    "node"
+    "movies"
   ],
   "author": "Marius Berget",
   "license": "MIT"
