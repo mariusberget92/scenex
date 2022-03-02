@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 import scenex from './index.js';
 
