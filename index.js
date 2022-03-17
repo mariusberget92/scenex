@@ -18,8 +18,8 @@ export default function(str) {
     year: /\b\d{4}\b(?!\d|.*\b\d{4}\b)/ig,
 
     // Matching a resolution (720p, 1080p, 1440p etc.) with negative lookahead
-    resolution: /\b(\d{3,4}p)\b(?!\b(\d{3,4}p)\b|.*\b(\d{3,4}p)\b)/ig,
-
+    resolution: /\b(\d{3,4}(p|i))\b(?!\b(\d{3,4}(p|i))\b|.*\b(\d{3,4}(p|i))\b)/ig,
+    
     // HDR with negative lookahead
     HDR: /\bHDR\b(?!\bHDR\b|.*\bHDR\b)/ig,
 
@@ -31,6 +31,9 @@ export default function(str) {
 
     // Video encoding with negative lookeahead
     videoEncoding: /\b[xh][\.\s]?\d{3}\b(?!\b[xh][\.\s]?\d{3}\b|.*\b[xh][\.\s]?\d{3}\b)/ig,
+    
+    // Video codec with negative lookahead
+    videoCodec: /(\bHEVC|AVC\b)/ig,
 
     // Video standard with negative lookahead
     videoStandard: /\b(NTSC|PAL)\b(?!\b(NTSC|PAL)\b|.*\b(NTSC|PAL)\b)/ig,    
@@ -39,7 +42,7 @@ export default function(str) {
     videoEdition: /UNRATED|\bDC\b|REMASTERED|(DIRECTORS|EXTENDED|COLLECTORS|FINAL)[\.\s](CUT|EDITION)|EXTENDED|\bHARDCORE VERSION\b/ig,
     
     // Video source with negative lookahead
-    videoSource: /\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|BluRay|(WEB(-)?(DL)?)(?!\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|BluRay|(WEB(-)?(DL)?)|.*\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|(WEB(-)?(DL)?))|BluRay(?!\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|BluRay|(WEB(-)?(DL)?)(?!\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|BluRay|(WEB(-)?(DL)?)|.*\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|BluRay|(WEB(-)?(DL)?))|.*\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|BluRay|(WEB(-)?(DL)?)(?!\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|BluRay|(WEB(-)?(DL)?)|.*\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|BluRay|(WEB(-)?(DL)?)))/ig,
+    videoSource: /\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|(BluRay|Blu-Ray)|(WEB(-)?(DL)?)(?!\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|(BluRay|Blu-Ray)|(WEB(-)?(DL)?)|.*\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|(WEB(-)?(DL)?))|(BluRay|Blu-Ray)(?!\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|(BluRay|Blu-Ray)|(WEB(-)?(DL)?)(?!\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|(BluRay|Blu-Ray)|(WEB(-)?(DL)?)|.*\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|(BluRay|Blu-Ray)|(WEB(-)?(DL)?))|.*\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|(BluRay|Blu-Ray)|(WEB(-)?(DL)?)(?!\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|(BluRay|Blu-Ray)|(WEB(-)?(DL)?)|.*\bCAM\b|\bTS(?!C)\b|TELESYNC|(DVD|BD)SCR|\bSCR\b|\bDDC\b|R5([\.\s\-]LINE)?|(DVD|HD|BR|BD|WEB)Rip|DVD(R)?|(HD|PD)TV|(BluRay|Blu-Ray)|(WEB(-)?(DL)?)))/ig,
 
     // 3D with negative lookahead
     video3D: /\b3D\b(?!\b3D\b|.*\b3D\b)/ig,
@@ -48,19 +51,34 @@ export default function(str) {
     streamingSource: /(\bPCOK\b|\bNICK\b|\bHULU\b|\bFOX\b|\bCW\b|\bCBS\b|\bBBC\b|\bATVP\b|\bNF\b|\bAMZN\b|\bDSNP\b|\bHMAX\b)(?!(\bPCOK\b|\bNICK\b|\bHULU\b|\bFOX\b|\bCW\b|\bCBS\b|\bBBC\b|\bATVP\b|\bNF\b|\bAMZN\b|\bDSNP\b|\bHMAX\b)|.*(\bPCOK\b|\bNICK\b|\bHULU\b|\bFOX\b|\bCW\b|\bCBS\b|\bBBC\b|\bATVP\b|\bNF\b|\bAMZN\b|\bDSNP\b|\bHMAX\b))/ig,
 
     // Misceleanious
-    misc: /(COMPLETE|LIMITED|INTERNAL|DUBBED|DOCU)/ig,
+    misc: /(LIMITED|INTERNAL|DUBBED|DOCU)/ig,
+
+    // Is remux with negative lookahead
+    remux: /(\bREMUX\b)/ig,
 
     // Language with negative lookahead
     language: /((MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)(SUBS)?)(?!((MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)(SUBS)?)|.*((MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)(SUBS)?))(?!((MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)(SUBS)?)(?!((MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)(SUBS)?)|.*((MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)(SUBS)?))|.*((MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)(SUBS)?)(?!((MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)(SUBS)?)|.*((MULTI|NORDIC|DANISH|SWEDISH|NORWEGIAN|GERMAN|ITALIAN|FRENCH|SPANISH)(SUBS)?)))/ig,
 
     // Audio
-    audio: /\b2audio\b|(AAC([0-9][\.\s][0-9])?|AAC)|(DTS([\.\s\-](HD([\.\s\-]MA)?))?(([\.\s\-])?\d[\.\s\-]\d)?)|(AC3([\.\s](DD([0-9][\.\s][0-9])?)?)?)|\b(DD(P)?(([\+\-\.\s])?([\+\-\.\s]ATMOS)?(\d)?[\-\.\s]\d)?([\-\.\s]ATMOS)?)\b|((ATMOS[\.\-\s])?TRUE([\-\.\s])?HD[\.\-\s](ATMOS[\.\-\s])?(\d[\.\-\s]\d)?|(ATMOS)([\.\s\-]\d[\.\s\-]\d)?)/ig,
+    audio: /\b2audio\b|(FLAC(([\.\s])?[0-9][\.\s][0-9])?|FLAC)|(AAC([0-9][\.\s][0-9])?|AAC)|(DTS([\.\s\-](HD(([\.\s\-])?MA)?))?(([\.\s\-])?\d[\.\s\-]\d)?)|(AC3([\.\s](DD([0-9][\.\s][0-9])?)?)?)|\b(DD(P)?(([\+\-\.\s])?([\+\-\.\s]ATMOS)?(\d)?[\-\.\s]\d)?([\-\.\s]ATMOS)?)\b|((ATMOS[\.\-\s])?TRUE([\-\.\s])?HD[\.\-\s](ATMOS[\.\-\s])?(\d[\.\-\s]\d)?|(ATMOS)([\.\s\-]\d[\.\s\-]\d)?)/ig,
+
+    // Season and episode
+    seasonEpisode: /(S\d{2}\-S\d{2}|S\d{2}(E\d{2})?)(?!(S\d{2}\-S\d{2}|S\d{2}(E\d{2})?)|.*(S\d{2}\-S\d{2}|S\d{2}(E\d{2})?))/ig,
+
+    // Air date
+    airDate: /\b(\d{2}|\d{2})(\d{2})?[\.\-\s]\d{2}[\.\-\s]\d{2}\b(?!\b(\d{2}|\d{2})(\d{2})?[\.\-\s]\d{2}[\.\-\s]\d{2}\b|.*\b(\d{2}|\d{2})(\d{2})?[\.\-\s]\d{2}[\.\-\s]\d{2}\b)/ig,
+
+    // Complete release for full series or seasons
+    completeRelease: /\bCOMPLETE\b(?!\bCOMPLETE\b|.*\bCOMPLETE\b)/ig,
+
+    // Check for XXX
+    XXX: /\bXXX\b(?!\bXXX\b|.*\bXXX\b)/ig,
 
     // Some stuff we don't care about tbh.
-    trash: /REAL[\.\s]PROPER|PROPER|REPACK|READNFO|READ[\.\s]NFO|DiRFiX|NFOFiX|REDUX(?!REAL[\.\s]PROPER|PROPER|REPACK|READNFO|READ[\.\s]NFO|DiRFiX|NFOFiX|REDUX.*REAL[\.\s]PROPER|PROPER|REPACK|READNFO|READ[\.\s]NFO|DiRFiX|NFOFiX|REDUX)/ig,
+    trash: /BACKHAUL|REAL[\.\s]PROPER|PROPER|REPACK|READNFO|READ[\.\s]NFO|DiRFiX|NFOFiX|REDUX|MP4(?!BACKHAUL|REAL[\.\s]PROPER|PROPER|REPACK|READNFO|READ[\.\s]NFO|DiRFiX|NFOFiX|REDUX|MP4.*BACKHAUL|REAL[\.\s]PROPER|PROPER|REPACK|READNFO|READ[\.\s]NFO|DiRFiX|NFOFiX|REDUX|MP4)/ig,
 
     // Release group
-    releaseGroup: /\w+$/ig
+    releaseGroup: /\w+$/ig,
 
   };
   
@@ -88,8 +106,10 @@ export default function(str) {
   }
   
   // Do some cleanup to title
-  matches = matches.replace(/,/g, '|');
-  data.title = data.title.replace(/\./g, ' ')
+  matches = matches.replace(/,/g, '|')
+  matches = matches.split('|').slice(1).join('|');
+  console.log(matches);
+  data.title = data.title.replace(/\./g, ' ').replace(RegExp(matches+ '-', 'g'), '')
   .replace(/\s{2,}/g, ' ')
   .trim();
 
