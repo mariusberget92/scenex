@@ -108,7 +108,7 @@ export default function(str) {
   // Do some cleanup to title
   matches = matches.replace(/,/g, '|')
   matches = matches.split('|').slice(1).join('|');
-  console.log(matches);
+  
   data.title = data.title.replace(/\./g, ' ').replace(RegExp(matches+ '-', 'g'), '')
   .replace(/\s{2,}/g, ' ')
   .trim();
