@@ -1,5 +1,7 @@
 # Scenex
 
+DEMO HERE: https://scenex.darkleaks.net/
+
 This package allows you to grab tags from a scene-release formatted string.
 Now works with movies, complete tv shows or single episodes and XXX titles.
 There might be some bugs after the big update the allowed for matching against
