@@ -1,6 +1,6 @@
 # Scenex
 
-DEMO HERE: https://scenex.darkleaks.net/
+## Archived!
 
 This package allows you to grab tags from a scene-release formatted string.
 Now works with movies, complete tv shows or single episodes and XXX titles.
